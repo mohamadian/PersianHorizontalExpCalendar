@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="PersianHorizontalExpCalendar">
+        <attr name="initial_view" format="string"/>
+        <attr name="range_months_before_init" format="integer"/>
+        <attr name="range_months_after_init" format="integer"/>
+        <attr name="mark_today" format="boolean"/>
+        <attr name="mark_selected_day" format="boolean"/>
+        <attr name="use_RTL_direction" format="boolean"/>
+        <attr name="top_container_height" format="dimension"/>
+        <attr name="center_container_expanded_height" format="dimension"/>
+        <attr name="bottom_container_height" format="dimension"/>
+    </declare-styleable>
+</resources>

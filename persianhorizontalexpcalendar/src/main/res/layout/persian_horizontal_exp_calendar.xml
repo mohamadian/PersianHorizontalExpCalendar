@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_linearlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/top_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:layout_height="50dp">
+
+        <Button
+            android:id="@+id/scroll_to_today_button"
+            android:layout_width="35dp"
+            android:layout_height="90dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="6dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/calendar_today"
+            android:gravity="center"
+            android:paddingTop="0dp"
+            android:text="26"
+            android:textColor="#0982e3"
+            android:textSize="13sp"/>
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:textColor="@android:color/black"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            tools:text="DATE"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/center_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        tools:layout_height="200dp">
+
+        <LinearLayout
+            android:id="@+id/lable_cell_linearlayout"
+            android:visibility="gone"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <GridLayout
+                android:id="@+id/lable_cell_grid_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"/>
+
+            <View
+                android:id="@+id/lable_cell_horizontal_line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#f0f0f0" />
+
+        </LinearLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/month_view_pager"
+            android:layout_below="@id/lable_cell_linearlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/week_view_pager"
+            android:layout_below="@id/lable_cell_linearlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <include
+            android:id="@+id/animate_container"
+            layout="@layout/animate_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:layout_height="50dp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/bottom_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:layout_height="50dp">
+
+        <View
+            android:id="@+id/line_view"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="#ffffff"/>
+
+        <ImageView
+            android:id="@+id/expandImage"
+            android:layout_below="@id/line_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/icon_arrow_up" />
+
+    </RelativeLayout>
+
+</LinearLayout>

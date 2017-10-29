@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="0dp"
+        android:background="#f0f0f0">
+
+        <com.mohamadian.persianhorizontalexpcalendar.PersianHorizontalExpCalendar
+            android:id="@+id/persianCalendar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            app:initial_view="Month"
+            app:mark_today="true"
+            app:mark_selected_day="true"
+            app:use_RTL_direction="true"
+            app:range_months_before_init="12"
+            app:range_months_after_init="12"
+            app:top_container_height="0dp"
+            app:center_container_expanded_height="320dp"
+            app:bottom_container_height="30dp"/>
+
+        <RelativeLayout
+            android:id="@+id/mark_re_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="30dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="10dp"
+            android:background="@drawable/re_layout_background"
+            android:layout_below="@id/persianCalendar">
+
+            <Button
+                android:id="@+id/mark_some_days"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mark some days"/>
+
+            <Button
+                android:id="@+id/custom_mark_today_selected_days"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/mark_some_days"
+                android:layout_marginTop="5dp"
+                android:text="custom mark: today, selected day"/>
+
+            <Button
+                android:id="@+id/clear_marks"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/custom_mark_today_selected_days"
+                android:layout_marginTop="5dp"
+                android:text="clear_marks"/>
+
+        </RelativeLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mark"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#a877bf"
+            android:background="@drawable/textview_background"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/persianCalendar"
+            android:layout_marginTop="15dp"/>
+
+        <RelativeLayout
+            android:id="@+id/scroll_re_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="30dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="10dp"
+            android:background="@drawable/re_layout_background"
+            android:layout_below="@id/mark_re_layout">
+
+            <Button
+                android:id="@+id/scroll_today"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="scroll to today"/>
+
+            <Button
+                android:id="@+id/scroll_next_month"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/scroll_today"
+                android:layout_marginTop="5dp"
+                android:text="scroll to next month"/>
+
+            <Button
+                android:id="@+id/scroll_specific_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/scroll_next_month"
+                android:layout_marginTop="5dp"
+                android:text="scroll to specific date"/>
+
+        </RelativeLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Scroll"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#a877bf"
+            android:background="@drawable/textview_background"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/mark_re_layout"
+            android:layout_marginTop="15dp"/>
+
+        <RelativeLayout
+            android:id="@+id/font_color_re_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="30dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="10dp"
+            android:background="@drawable/re_layout_background"
+            android:layout_below="@id/scroll_re_layout">
+
+            <Button
+                android:id="@+id/custom_background"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="custom background"/>
+
+        </RelativeLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Custom Background"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#a877bf"
+            android:background="@drawable/textview_background"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/scroll_re_layout"
+            android:layout_marginTop="15dp"/>
+
+    </RelativeLayout>
+
+
+</ScrollView>
