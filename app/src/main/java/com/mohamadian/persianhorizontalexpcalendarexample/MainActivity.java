@@ -130,7 +130,7 @@ public class MainActivity extends AppCompatActivity {
                                 .setViewLayoutGravity(Gravity.CENTER_VERTICAL | Gravity.RIGHT)
                                 .setTextColor(Color.BLUE))
 
-                .markDate(new DateTime(1396,8,15,0,0,perChr), Marks.CustomMarks.HorizontalLine_Right, Color.parseColor("#b4e391"))
+                .markDate(new DateTime(1396,8,7,0,0,perChr), Marks.CustomMarks.HorizontalLine_Right, Color.parseColor("#b4e391"))
 
                 .markDate(new DateTime(1396,8,5,0,0,perChr),
                         new CustomGradientDrawable(GradientDrawable.OVAL, new int[] {Color.parseColor("#35b4e391"), Color.parseColor("#5561c419"), Color.parseColor("#35b4e391")})
@@ -138,7 +138,7 @@ public class MainActivity extends AppCompatActivity {
                                 .setcornerRadius(20)
                                 .setTextColor(Color.parseColor("#000000")))
 
-                .markDate(new DateTime(1396,8,7,0,0,perChr),
+                .markDate(new DateTime(1396,8,15,0,0,perChr),
                         new CustomGradientDrawable(GradientDrawable.OVAL, Color.parseColor("#35a677bd"))
                                 .setstroke(1,Color.parseColor("#a677bd")))
 

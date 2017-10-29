@@ -124,6 +124,9 @@ public class DayCellView extends BaseCellView {
         boolean is_CurrentTime = this.timeType == TimeType.CURRENT | Config.CELL_TEXT_SHOW_MARKS_ANOTHER_MONTH | Config.currentViewPager == Config.ViewPagerType.WEEK;
 
         if (markSetup == null) {
+            if (newView != null)
+                markContainer.removeView(newView);
+
             markContainer.setVisibility(GONE);
             if (is_CurrentTime)
                 text.setTextColor(daysTextColorCurrentMonth);
