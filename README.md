@@ -67,7 +67,31 @@ and use `MyApplication` class in `AndroidManifest.xml` like this:
 </manifest>
 ```
 
-### How to 
+### Add to Layout
+To use PersianHorizontalExpCalendar, you need to add it in layout by using xml file.
+
+```java
+  <com.mohamadian.persianhorizontalexpcalendar.PersianHorizontalExpCalendar
+      android:id="@+id/persianCalendar"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_alignParentLeft="true"
+      android:layout_alignParentStart="true"
+      android:layout_alignParentTop="true"
+      app:initial_view="Week"
+      app:mark_today="true"
+      app:mark_selected_day="true"
+      app:use_RTL_direction="true"
+      app:range_months_before_init="12"
+      app:range_months_after_init="12"
+      app:top_container_height="0dp"
+      app:center_container_expanded_height="320dp"
+      app:bottom_container_height="30dp"/>
+```
+
+`app:initial_view="Week"`: Set default view to `week` view. If you want to set default view to `month` view use this `app:initial_view="Month"`
+
+
 
 ### Credits 
 This libary is based on [HorizontalExpandableCalendar-Android](https://github.com/sulo61/HorizontalExpandableCalendar-Android) and [PersianJodaTime](https://github.com/mohamadian/PersianJodaTime).
