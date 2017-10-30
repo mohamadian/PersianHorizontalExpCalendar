@@ -130,7 +130,7 @@ public class MainActivity extends AppCompatActivity {
                                 .setViewLayoutGravity(Gravity.CENTER_VERTICAL | Gravity.RIGHT)
                                 .setTextColor(Color.BLUE))
 
-                .markDate(new DateTime(1396,8,7,0,0,perChr), Marks.CustomMarks.HorizontalLine_Right, Color.parseColor("#b4e391"))
+                .markDate(new DateTime(1396,8,7,0,0,perChr), Marks.CustomMarks.VerticalLine_Right, Color.parseColor("#b4e391"))
 
                 .markDate(new DateTime(1396,8,5,0,0,perChr),
                         new CustomGradientDrawable(GradientDrawable.OVAL, new int[] {Color.parseColor("#35b4e391"), Color.parseColor("#5561c419"), Color.parseColor("#35b4e391")})
@@ -144,7 +144,7 @@ public class MainActivity extends AppCompatActivity {
 
                 .markDate(new DateTime(1396,8,23,0,0,perChr), Marks.CustomMarks.SmallOval_Bottom, Color.GREEN)
                 .markDate(new DateTime(perChr).plusDays(14), Marks.CustomMarks.SmallOval_Bottom)
-                .markDate(new DateTime(perChr).plusDays(15), Marks.CustomMarks.HorizontalLine_Right)
+                .markDate(new DateTime(perChr).plusDays(15), Marks.CustomMarks.VerticalLine_Right)
                 .updateMarks();
 
         scrollToToday();

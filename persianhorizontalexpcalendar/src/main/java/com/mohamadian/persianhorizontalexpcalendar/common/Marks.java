@@ -21,8 +21,8 @@ public class Marks {
     private static boolean locked = false;
 
     public static final float MARK_SmallOval_Bottom_SIZE_PROPORTION_TO_CELL = 0.15f;
-    public static final float MARK_HorizontalLine_Right_HEIGHT_PROPORTION_TO_CELL = 0.4f;
-    public static final float MARK_HorizontalLine_Right_WIDTH_PROPORTION_TO_CELL = 0.08f;
+    public static final float MARK_VerticalLine_Right_HEIGHT_PROPORTION_TO_CELL = 0.4f;
+    public static final float MARK_VerticalLine_Right_WIDTH_PROPORTION_TO_CELL = 0.08f;
 
     public static void init() {
         marksMap = new HashMap<>();
@@ -77,8 +77,8 @@ public class Marks {
             case SmallOval_Bottom:
                 markSetup.setSmallOval_Bottom(mark, color);
                 break;
-            case HorizontalLine_Right:
-                markSetup.setHorizontalLine_Right(mark, color);
+            case VerticalLine_Right:
+                markSetup.setVerticalLine_Right(mark, color);
                 break;
             default:
                 markSetup.setCustomGradientDrawable(mark, customGradientDrawableMark);
@@ -120,7 +120,7 @@ public class Marks {
 
     public enum CustomMarks {
         SmallOval_Bottom,
-        HorizontalLine_Right,
+        VerticalLine_Right,
         Custom
     }
 }

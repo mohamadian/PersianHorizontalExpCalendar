@@ -25,7 +25,7 @@ public class DayCellView extends BaseCellView {
     private View markToday;
     private View markSelected;
     private View markSmallOval_Bottom;
-    private View markHorizontalLine_Right;
+    private View markVerticalLine_Right;
     private View newView = null;
 
     private int daysTextColorCurrentMonth = Config.CELL_TEXT_CURRENT_MONTH_COLOR;
@@ -58,7 +58,7 @@ public class DayCellView extends BaseCellView {
         markToday = findViewById(R.id.mark_today_view);
         markSelected = findViewById(R.id.mark_selected_view);
         markSmallOval_Bottom = findViewById(R.id.mark_custom1);
-        markHorizontalLine_Right = findViewById(R.id.mark_custom2);
+        markVerticalLine_Right = findViewById(R.id.mark_custom2);
 
         text.setTextColor(daysTextColorCurrentMonth);
     }
@@ -99,7 +99,7 @@ public class DayCellView extends BaseCellView {
         markParams.width = size;
 
         setupSmallOval_BottomMark(size);
-        setupHorizontalLine_RightMark(size);
+        setupVerticalLine_RightMark(size);
     }
 
     private void setupSmallOval_BottomMark(int size) {
@@ -109,10 +109,10 @@ public class DayCellView extends BaseCellView {
         markCustomParams.width = markCustomPercentSize;
     }
 
-    private void setupHorizontalLine_RightMark(int size) {
-        LayoutParams markCustomParams = (LayoutParams) markHorizontalLine_Right.getLayoutParams();
-        markCustomParams.height = (int) (size * Marks.MARK_HorizontalLine_Right_HEIGHT_PROPORTION_TO_CELL);
-        markCustomParams.width = (int) (size * Marks.MARK_HorizontalLine_Right_WIDTH_PROPORTION_TO_CELL);
+    private void setupVerticalLine_RightMark(int size) {
+        LayoutParams markCustomParams = (LayoutParams) markVerticalLine_Right.getLayoutParams();
+        markCustomParams.height = (int) (size * Marks.MARK_VerticalLine_Right_HEIGHT_PROPORTION_TO_CELL);
+        markCustomParams.width = (int) (size * Marks.MARK_VerticalLine_Right_WIDTH_PROPORTION_TO_CELL);
     }
 
     public void setMarkSetup(MarkSetup markSetup) {
@@ -138,9 +138,9 @@ public class DayCellView extends BaseCellView {
             markToday.setVisibility(markSetup.isToday() & is_CurrentTime ? VISIBLE : GONE);
             markSelected.setVisibility(markSetup.isSelected() & !markSetup.isToday() & is_CurrentTime ? VISIBLE : GONE);
             markSmallOval_Bottom.setVisibility(markSetup.isSmallOval_Bottom() & is_CurrentTime ? VISIBLE : GONE);
-            markHorizontalLine_Right.setVisibility(markSetup.isHorizontalLine_Right() & is_CurrentTime ? VISIBLE : GONE);
+            markVerticalLine_Right.setVisibility(markSetup.isVerticalLine_Right() & is_CurrentTime ? VISIBLE : GONE);
 
-            if (markSmallOval_Bottom.getVisibility() == VISIBLE || markHorizontalLine_Right.getVisibility() == VISIBLE)
+            if (markSmallOval_Bottom.getVisibility() == VISIBLE || markVerticalLine_Right.getVisibility() == VISIBLE)
                 if (is_CurrentTime)
                     text.setTextColor(daysTextColorCurrentMonth);
                 else
@@ -165,8 +165,8 @@ public class DayCellView extends BaseCellView {
             if (markSetup.isSmallOval_Bottom())
                 changeSmallOval_BottomBackgroundColor(markSetup.getSmallOval_BottomColor());
 
-            if (markSetup.isHorizontalLine_Right())
-                changeHorizontalLine_RightBackgroundColor(markSetup.getHorizontalLine_RightColor());
+            if (markSetup.isVerticalLine_Right())
+                changeVerticalLine_RightBackgroundColor(markSetup.getVerticalLine_RightColor());
         }
     }
 
@@ -200,7 +200,7 @@ public class DayCellView extends BaseCellView {
         markSmallOval_Bottom.setBackground(new CustomGradientDrawable(GradientDrawable.OVAL, color));
     }
 
-    private void changeHorizontalLine_RightBackgroundColor(int color){
-        markHorizontalLine_Right.setBackground(new CustomGradientDrawable(GradientDrawable.RECTANGLE, color));
+    private void changeVerticalLine_RightBackgroundColor(int color){
+        markVerticalLine_Right.setBackground(new CustomGradientDrawable(GradientDrawable.RECTANGLE, color));
     }
 }
