@@ -148,13 +148,13 @@ public class MainActivity extends AppCompatActivity {
 ```
 
 ### Marks
-Current in module there are 5 example marks.
+Current in library there are 5 example marks:
 
 * Today (Blue oval, white text color)
 * Selected day
 * VerticalLine_Right
 * SmallOval_Bottom
-* CustomGradientDrawable
+* CustomGradientDrawable (Customizable mark based on `GradientDrawable` class)
 
 ```java
     public void markSomeDays(){
