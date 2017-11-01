@@ -99,6 +99,19 @@ LTR Direction | RLT Direction
 
 `app:range_months_before_init="12"` , `app:range_months_after_init="12"`: Set range in months before and after INIT_DATE (today), values in Integer.
 
+`
+      app:top_container_height="0dp"
+      app:center_container_expanded_height="320dp"
+      app:bottom_container_height="30dp"
+`
+You can define size of calendar containers (top, center and bottom container):
+
+  app:top_container_height="50dp"  | app:top_container_height="0dp" | app:top_container_height="0dp"
+  app:center_container_expanded_height="320dp" | app:center_container_expanded_height="320dp" | app:center_container_expanded_height="320dp"
+  app:bottom_container_height="30dp" | app:bottom_container_height="30dp" | app:bottom_container_height="0dp"
+---- | ----
+![](./screenshot/jpg01.gif) | ![](./screenshot/jpg02_rtl.gif) | ![](./screenshot/jpg03_rtl.gif)
+
 ### ...
 
 ### Credits 
