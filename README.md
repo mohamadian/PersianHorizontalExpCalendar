@@ -108,7 +108,7 @@ You can define size of calendar containers (top, center and bottom container):
 
   
 ---- | ---- | ----
-![All](./screenshot/jpg01.gif) | ![ceneter_bottom](./screenshot/jpg02.gif) | ![center](./screenshot/jpg03.gif)
+![All](./screenshot/jpg01.jpg) | ![ceneter_bottom](./screenshot/jjpg01.jpg) | ![center](./screenshot/jpg01.jpg)
 
 ### ...
 
