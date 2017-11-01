@@ -211,8 +211,7 @@ You can set Today and SelectedDay mark to CustomGradientDrawable:
 ```
 
 ### More Customization
-You can customize `day cells` & `day labels` typeface and text color. Please see public method of `PersianHorizontalExpCalendar` class. 
-You must call these method on `OnCreate` event.
+You can customize `day cells` & `day labels` typeface and text color. For learn how to make more customization, please see public methods of `PersianHorizontalExpCalendar` class. You must call these methods on `OnCreate` event.
 
 ### Credits 
 This libary is based on [HorizontalExpandableCalendar-Android](https://github.com/sulo61/HorizontalExpandableCalendar-Android) and [PersianJodaTime](https://github.com/mohamadian/PersianJodaTime).
