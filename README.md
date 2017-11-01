@@ -106,9 +106,9 @@ LTR Direction | RLT Direction
 ```
 You can define size of calendar containers (top, center and bottom container):
 
-  
+LTR Direction | RLT Direction
 ---- | ----
-![All](./screenshot/jpg01.jpg) | ![ceneter_bottom](./screenshot/jpg02.jpg) 
+![ltr](./screenshot/jpg01.jpg) | ![rtl](./screenshot/jpg02.jpg)
 
 
 
