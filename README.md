@@ -191,8 +191,28 @@ Current in module there are 5 example marks.
     }
 ```
 
-do not need to call `updateMarks` if mark some dates at activity `OnCreate` event.
+do not need to call `updateMarks` if mark some dates on `OnCreate` event.
 
+### Today & SelectedDay Custom Mark
+You can set Today and SelectedDay mark to CustomGradientDrawable:
+
+```java
+    public void cutomMarkTodaySelectedDay(){
+        persianHorizontalExpCalendar
+                .setMarkTodayCustomGradientDrawable(new CustomGradientDrawable(GradientDrawable.OVAL, new int[] {Color.parseColor("#55fefcea"), Color.parseColor("#55f1da36"), Color.parseColor("#55fefcea")})
+                        .setstroke(2,Color.parseColor("#EFCF00"))
+                        .setTextColor(Color.parseColor("#E88C02")))
+
+                .setMarkSelectedDateCustomGradientDrawable(new CustomGradientDrawable(GradientDrawable.OVAL, new int[] {Color.parseColor("#55f3e2c7"), Color.parseColor("#55b68d4c"), Color.parseColor("#55e9d4b3")})
+                        .setstroke(2,Color.parseColor("#E89314"))
+                        .setTextColor(Color.parseColor("#E88C02")))
+                .updateMarks();
+    }
+```
+
+### More Customization
+You can customize `day cells` & `day labels` typeface and text color. Please see public method of `PersianHorizontalExpCalendar` class. 
+You must call these method on `OnCreate` event.
 
 ### Credits 
 This libary is based on [HorizontalExpandableCalendar-Android](https://github.com/sulo61/HorizontalExpandableCalendar-Android) and [PersianJodaTime](https://github.com/mohamadian/PersianJodaTime).
