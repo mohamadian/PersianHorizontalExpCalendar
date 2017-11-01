@@ -210,8 +210,28 @@ You can set Today and SelectedDay mark to CustomGradientDrawable:
     }
 ```
 
+Mark some days | Customize Today & SelectedDay mark
+---- | ----
+![ltr](./screenshot/jpg04.jpg) | ![rtl](./screenshot/jpg05.jpg)
+
 ### More Customization
 You can customize `day cells` & `day labels` typeface and text color. For learn how to make more customization, please see public methods of `PersianHorizontalExpCalendar` class. You must call these methods on `OnCreate` event.
+
+### Scroll To Date
+If you what to scrool to specific date, use scrollToDate(DateTime dateTime) function in `PersianHorizontalExpCalendar` class.
+
+```java
+        Chronology perChr = PersianChronologyKhayyam.getInstance(DateTimeZone.forID("Asia/Tehran"));
+        DateTime dt = new DateTime(1396,12,1,0,0,0,0,perChr);
+        persianHorizontalExpCalendar
+                .scrollToDate(dt);
+```
+or
+```java
+        Chronology perChr = PersianChronologyKhayyam.getInstance(DateTimeZone.forID("Asia/Tehran"));
+        persianHorizontalExpCalendar
+                .scrollToDate(new DateTime(perChr).plusMonths(1).plusDays(3));
+```
 
 ### Credits 
 This libary is based on [HorizontalExpandableCalendar-Android](https://github.com/sulo61/HorizontalExpandableCalendar-Android) and [PersianJodaTime](https://github.com/mohamadian/PersianJodaTime).
