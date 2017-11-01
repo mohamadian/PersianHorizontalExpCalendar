@@ -106,9 +106,7 @@ LTR Direction | RLT Direction
 ```
 You can define size of calendar containers (top, center and bottom container):
 
-app:top_container_height="50dp" | app:top_container_height="0dp" | app:top_container_height="0dp"
-app:top_container_height="50dp" | app:top_container_height="0dp" | app:top_container_height="0dp"
-app:top_container_height="50dp" | app:top_container_height="0dp" | app:top_container_height="0dp"
+All containers | Center & bottom containers | Just center container
 ---- | ---- | ----
 ![ltr](./screenshot/jpg01.jpg) | ![rtl](./screenshot/jpg02.jpg) | ![rtl](./screenshot/jpg03.jpg)
 
