@@ -92,8 +92,10 @@ To use PersianHorizontalExpCalendar, you need to add it in layout by using xml f
 `app:initial_view="Week"`: Set default view to `week` view. If you want to set default view to `month` view use this `app:initial_view="Month"`
 
 `app:use_RTL_direction="true"`: Set direction of calendar. 
-![ltr](./screenshot/gif02_ltr.gif)
-![rtl](./screenshot/gif02_rtl.gif)
+
+LTR Direction | RLT Direction
+---- | ----
+![ltr](./screenshot/gif02_ltr.gif) | ![rtl](./screenshot/gif02_rtl.gif)
 
 `app:range_months_before_init="12"` , `app:range_months_after_init="12"`: Set range in months before and after INIT_DATE (today), values in Integer.
 
