@@ -106,14 +106,9 @@ LTR Direction | RLT Direction
 ```
 You can define size of calendar containers (top, center and bottom container):
 
-  app:top_container_height="50dp"  | app:top_container_height="0dp" | app:top_container_height="0dp"
-  
-  app:center_container_expanded_height="320dp" | app:center_container_expanded_height="320dp" | app:center_container_expanded_height="320dp"
-  
-  app:bottom_container_height="30dp" | app:bottom_container_height="30dp" | app:bottom_container_height="0dp"
   
 ---- | ---- | ----
-![](./screenshot/jpg01.gif) | ![](./screenshot/jpg02_rtl.gif) | ![](./screenshot/jpg03_rtl.gif)
+![All](./screenshot/jpg01.gif) | ![ceneter_bottom](./screenshot/jpg02.gif) | ![center](./screenshot/jpg03.gif)
 
 ### ...
 
