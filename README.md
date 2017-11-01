@@ -111,6 +111,11 @@ All containers | Center & bottom containers | Just center container
 ![ltr](./screenshot/jpg01.jpg) | ![rtl](./screenshot/jpg02.jpg) | ![rtl](./screenshot/jpg03.jpg)
 
 ### Set `setPersianHorizontalExpCalListener`
+
+* onCalendarScroll triggered after scroll, parameter dateTime is first day of current month/week
+* onDateSelected triggered after select day, parameter dateTime is selected day
+* onChangeViewPager triggered on expand or collapse
+
 ```java
 public class MainActivity extends AppCompatActivity {
 
