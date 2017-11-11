@@ -2,7 +2,7 @@
 
 This library offers a customizable and expandable horizontal Persian calendar widget for Android 4.1 (Jelly Bean) (API 16) +.
 
-## Screenshots
+## Screenshot
 ![screenshot ](./screenshot/gif01.gif)
 
 ## Usage
@@ -214,7 +214,7 @@ Mark some days | Customize Today & SelectedDay mark
 ---- | ----
 ![ltr](./screenshot/jpg04.jpg) | ![rtl](./screenshot/jpg05.jpg)
 
-### More Customization
+### More Customizations
 You can customize `day cells` & `day labels` typeface and text color. For learn how to make more customization, please see public methods of `PersianHorizontalExpCalendar` class. You must call these methods on `OnCreate` event.
 
 ### Scroll To Date
