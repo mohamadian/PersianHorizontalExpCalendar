@@ -27,7 +27,7 @@ allprojects {
 ```java
 dependencies {
   ...  
-  implementation 'com.github.mohamadian:PersianHorizontalExpCalendar:1.4.3'
+  implementation 'com.github.mohamadian:PersianHorizontalExpCalendar:1.4.4'
 }
 ```
 

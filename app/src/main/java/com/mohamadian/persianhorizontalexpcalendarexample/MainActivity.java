@@ -43,7 +43,6 @@ public class MainActivity extends AppCompatActivity {
         now = new DateTime(perChr);
         setCustomActionBar();
 
-
         persianHorizontalExpCalendar = (PersianHorizontalExpCalendar)findViewById(R.id.persianCalendar);
         persianHorizontalExpCalendar
                 .setPersianHorizontalExpCalListener(new PersianHorizontalExpCalendar.PersianHorizontalExpCalListener() {

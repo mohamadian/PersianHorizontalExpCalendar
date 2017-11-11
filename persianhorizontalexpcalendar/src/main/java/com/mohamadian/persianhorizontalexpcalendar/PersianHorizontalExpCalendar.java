@@ -1,5 +1,6 @@
 package com.mohamadian.persianhorizontalexpcalendar;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
@@ -155,6 +156,7 @@ public class PersianHorizontalExpCalendar extends LinearLayout implements PageVi
         setHeightToCenterContainer(Utils.isMonthView() ? Config.monthViewPagerHeight : Config.weekViewPagerHeight);
     }
 
+    @SuppressLint("WrongViewCast")
     private void setupBottomContainerFromAttr(TypedArray typedArray) {
         if (typedArray.hasValue(R.styleable.PersianHorizontalExpCalendar_bottom_container_height)) {
             ((LinearLayout.LayoutParams) findViewById(R.id.bottom_container).getLayoutParams()).height =
@@ -175,12 +177,10 @@ public class PersianHorizontalExpCalendar extends LinearLayout implements PageVi
     private void setupInitialViewFromAttr(TypedArray typedArray) {
         if (typedArray.hasValue(R.styleable.PersianHorizontalExpCalendar_initial_view)) {
             Config.ViewPagerType nextView = typedArray.getString(R.styleable.PersianHorizontalExpCalendar_initial_view).equalsIgnoreCase("WEEK") ? Config.ViewPagerType.WEEK : Config.ViewPagerType.MONTH;;
-            if (nextView != Config.currentViewPager) {
-                Config.currentViewPager = nextView;
-                ifExpand = Config.currentViewPager == Config.ViewPagerType.MONTH;
-                ImageView expandImage = (ImageView) findViewById(R.id.expandImage);
-                expandImage.setImageResource(ifExpand ? collapseResID : expandResID);
-            }
+            Config.currentViewPager = nextView;
+            ifExpand = Config.currentViewPager == Config.ViewPagerType.MONTH;
+            ImageView expandImage = (ImageView) findViewById(R.id.expandImage);
+            expandImage.setImageResource(ifExpand ? collapseResID : expandResID);
         }
     }
 
