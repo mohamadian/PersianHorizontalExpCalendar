@@ -21,7 +21,7 @@
             app:initial_view="Month"
             app:mark_today="true"
             app:mark_selected_day="true"
-            app:use_RTL_direction="true"
+            app:use_RTL_direction="false"
             app:range_months_before_init="12"
             app:range_months_after_init="12"
             app:top_container_height="0dp"

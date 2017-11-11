@@ -45,7 +45,6 @@ public class MainActivity extends AppCompatActivity {
 
 
         persianHorizontalExpCalendar = (PersianHorizontalExpCalendar)findViewById(R.id.persianCalendar);
-
         persianHorizontalExpCalendar
                 .setPersianHorizontalExpCalListener(new PersianHorizontalExpCalendar.PersianHorizontalExpCalListener() {
                     @Override
