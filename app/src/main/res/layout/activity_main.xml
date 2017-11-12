@@ -135,7 +135,7 @@
             android:layout_marginTop="15dp"/>
 
         <RelativeLayout
-            android:id="@+id/font_color_re_layout"
+            android:id="@+id/custom_background_re_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -172,7 +172,43 @@
             android:layout_below="@id/scroll_re_layout"
             android:layout_marginTop="15dp"/>
 
-    </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/another_calendar_re_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="30dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="10dp"
+            android:background="@drawable/re_layout_background"
+            android:layout_below="@id/custom_background_re_layout">
 
+            <Button
+                android:id="@+id/another_calendar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Another Calendar"/>
+
+        </RelativeLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Another Calendar"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#a877bf"
+            android:background="@drawable/textview_background"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/custom_background_re_layout"
+            android:layout_marginTop="15dp"/>
+    </RelativeLayout>
 
 </ScrollView>

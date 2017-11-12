@@ -2,8 +2,6 @@ package com.mohamadian.persianhorizontalexpcalendar.model;
 
 import android.graphics.Color;
 
-import com.mohamadian.persianhorizontalexpcalendar.view.cell.CustomGradientDrawable;
-
 /**
  * Created by Tasnim on 10/27/2017.
  */

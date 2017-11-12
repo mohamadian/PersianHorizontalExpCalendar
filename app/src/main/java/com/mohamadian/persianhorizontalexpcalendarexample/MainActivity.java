@@ -1,5 +1,7 @@
 package com.mohamadian.persianhorizontalexpcalendarexample;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.graphics.Color;
 import android.graphics.Typeface;
@@ -14,9 +16,9 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.mohamadian.persianhorizontalexpcalendar.PersianHorizontalExpCalendar;
-import com.mohamadian.persianhorizontalexpcalendar.common.Config;
-import com.mohamadian.persianhorizontalexpcalendar.common.Marks;
-import com.mohamadian.persianhorizontalexpcalendar.view.cell.CustomGradientDrawable;
+import com.mohamadian.persianhorizontalexpcalendar.enums.PersianCustomMarks;
+import com.mohamadian.persianhorizontalexpcalendar.enums.PersianViewPagerType;
+import com.mohamadian.persianhorizontalexpcalendar.model.CustomGradientDrawable;
 
 import org.joda.time.Chronology;
 import org.joda.time.DateTime;
@@ -57,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
                     }
 
                     @Override
-                    public void onChangeViewPager(Config.ViewPagerType viewPagerType) {
+                    public void onChangeViewPager(PersianViewPagerType persianViewPagerType) {
 
                     }
                 });
@@ -111,38 +113,47 @@ public class MainActivity extends AppCompatActivity {
                 customBackground();
             }
         });
+
+        final Activity ac = this;
+        findViewById(R.id.another_calendar).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ac,AnotherActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     public void markSomeDays(){
-        persianHorizontalExpCalendar
+        this.persianHorizontalExpCalendar
                 .markDate(new DateTime(perChr).plusDays(7),
                         new CustomGradientDrawable(GradientDrawable.RECTANGLE, Color.BLACK)
-                                .setViewLayoutSize(ViewGroup.LayoutParams.MATCH_PARENT,10)
+                                .setViewLayoutSize(ViewGroup.LayoutParams.MATCH_PARENT, 10)
                                 .setViewLayoutGravity(Gravity.CENTER_HORIZONTAL | Gravity.BOTTOM)
                                 .setcornerRadius(5)
                                 .setTextColor(Color.BLUE))
 
                 .markDate(new DateTime(perChr).plusDays(10),
                         new CustomGradientDrawable(GradientDrawable.OVAL, Color.BLACK)
-                                .setViewLayoutSize(20,20)
+                                .setViewLayoutSize(20, 20)
                                 .setViewLayoutGravity(Gravity.CENTER_VERTICAL | Gravity.RIGHT)
                                 .setTextColor(Color.BLUE))
 
-                .markDate(new DateTime(1396,8,7,0,0,perChr), Marks.CustomMarks.VerticalLine_Right, Color.parseColor("#b4e391"))
+                .markDate(new DateTime(1396, 8, 7, 0, 0, perChr), PersianCustomMarks.VerticalLine_Right, Color.parseColor("#b4e391"))
 
-                .markDate(new DateTime(1396,8,5,0,0,perChr),
-                        new CustomGradientDrawable(GradientDrawable.OVAL, new int[] {Color.parseColor("#35b4e391"), Color.parseColor("#5561c419"), Color.parseColor("#35b4e391")})
-                                .setstroke(1,Color.parseColor("#62E200"))
+                .markDate(new DateTime(1396, 8, 5, 0, 0, perChr),
+                        new CustomGradientDrawable(GradientDrawable.OVAL, new int[]{Color.parseColor("#35b4e391"), Color.parseColor("#5561c419"), Color.parseColor("#35b4e391")})
+                                .setstroke(1, Color.parseColor("#62E200"))
                                 .setcornerRadius(20)
                                 .setTextColor(Color.parseColor("#000000")))
 
-                .markDate(new DateTime(1396,8,15,0,0,perChr),
+                .markDate(new DateTime(1396, 8, 15, 0, 0, perChr),
                         new CustomGradientDrawable(GradientDrawable.OVAL, Color.parseColor("#35a677bd"))
-                                .setstroke(1,Color.parseColor("#a677bd")))
+                                .setstroke(1, Color.parseColor("#a677bd")))
 
-                .markDate(new DateTime(1396,8,23,0,0,perChr), Marks.CustomMarks.SmallOval_Bottom, Color.GREEN)
-                .markDate(new DateTime(perChr).plusDays(14), Marks.CustomMarks.SmallOval_Bottom)
-                .markDate(new DateTime(perChr).plusDays(15), Marks.CustomMarks.VerticalLine_Right)
+                .markDate(new DateTime(1396, 8, 23, 0, 0, perChr), PersianCustomMarks.SmallOval_Bottom, Color.GREEN)
+                .markDate(new DateTime(perChr).plusDays(14), PersianCustomMarks.SmallOval_Bottom)
+                .markDate(new DateTime(perChr).plusDays(15), PersianCustomMarks.VerticalLine_Right)
                 .updateMarks();
 
         scrollToToday();

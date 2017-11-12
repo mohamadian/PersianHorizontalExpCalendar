@@ -1,17 +1,16 @@
-package com.mohamadian.persianhorizontalexpcalendar.view.cell;
+package com.mohamadian.persianhorizontalexpcalendar.model;
 
+import android.graphics.Color;
 import android.graphics.drawable.GradientDrawable;
 import android.view.Gravity;
 import android.view.ViewGroup;
-
-import com.mohamadian.persianhorizontalexpcalendar.common.Config;
 
 /**
  * Created by Tasnim on 10/27/2017.
  */
 
 public class CustomGradientDrawable extends GradientDrawable {
-    private int textColor = Config.CELL_TEXT_CURRENT_MONTH_COLOR;
+    private int textColor = Color.BLACK;
     private int topMargin = 5 , bottomMargin = 5, leftMargin = 5 , rightMargin = 5;
     private int layoutWidth = ViewGroup.LayoutParams.MATCH_PARENT,
             layoutHeight = ViewGroup.LayoutParams.MATCH_PARENT;
