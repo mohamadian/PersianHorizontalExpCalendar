@@ -141,7 +141,7 @@ public class MainActivity extends AppCompatActivity {
 
                     @Override
                     public void onChangeViewPager(PersianViewPagerType persianViewPagerType) {
-                      Log.i(TAG, "onChangeViewPager: " + persianViewPagerType.name());
+                      Log.i(TAG, "onChangeViewPager: " + persianViewPagerType.name()); 
                     }
                 });
 }
